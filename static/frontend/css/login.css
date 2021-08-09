@@ -1,0 +1,90 @@
+@font-face {
+  font-family: Pacifo-Regular;
+  src: url(../font/Pacifico/Pacifico-Regular.ttf);
+}
+@font-face {
+  font-family: KronaOne-Regular;
+  src: url(../font/Krona_One/);
+}
+@font-face {
+  font-family: Meriendo;
+  src: url(../font/Merienda/Merienda-Regular.ttf);
+  src: url(../font/Merienda/Merienda-Bold.ttf);
+}
+@font-face {
+  font-family: Nunito;
+  src: url(../font/Nunito/Nunito-BoldItalic.ttf);
+  src: url(../font/Nunito/Nunito-Black.ttf);
+  src: url(../font/Nunito/Nunito-Regular.ttf);
+}
+
+/* -----navigation------- */
+#nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.navbar-brand img {
+  height: 40px;
+  padding-left: 30px;
+}
+.navbar-nav li {
+  padding: 0 10px;
+  justify-content: space-between;
+}
+.navbar-nav li a {
+  float: right;
+  text-align: left;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+#nav-bar ul li a:hover {
+  color: #c5d1cd !important;
+  font-weight: bolder;
+  /* font-family: KronaOne-Regular; */
+}
+.navbar {
+  background: #fff;
+}
+.navbar-toggler {
+  border: none !important;
+}
+.nav-item a .nav-link {
+  color: #555 !important;
+  font-family: Merienda-Regular;
+  font-weight: bolder;
+  font-size: 20px;
+  text-transform: capitalize !important;
+}
+/* background pics */
+
+.bck-wrapper {
+  /* min-height: 100vh; */
+  width: 100%;
+  max-height: 10% !important;
+  background-image: url(../images/find\ your\ sound.jpg);
+  /* max-height: 85% !important; */
+  background-position: center;
+  background-size: cover;
+  background-attachment: unset;
+  position: relative;
+}
+
+.header-text {
+  margin-top: 45%;
+  color: black;
+  font-weight: 800;
+  font-family: Merienda-Bold;
+  text-transform: capitalize !important;
+}
+
+.form {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: auto;
+}
+
+.site-footer a {
+  color: #999999;
+  font: 20px;
+}

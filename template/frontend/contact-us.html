@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <link rel="stylesheet" href="./css/contact-us.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+
+	<style>
+		.bck-wrapper {
+		width: 100%;
+		max-height: 10% !important;
+		background-image:  url(./images/find\ your\ sound.jpg);
+		background-position: center;
+		background-size: cover;
+		background-attachment: unset;
+		position: relative;
+		height: 600px;
+		}
+
+		.header-text {
+		margin-top: 25%;
+		margin-right: 15%;
+		color: rgba(255, 255, 255, 0.993);
+		font-weight: 800;
+		font-family: Nunito-Regular;
+		text-transform: capitalize !important;
+		text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+
+    <!-- --------Navigation Bar---------- -->
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed">
+            <a href="#" class="navbar-brand"><strong>8<sup>th</sup> Realm <span class="text-success">.</span></strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="toggle-navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse align-items-center text-center justify-content-center" id="navbarNav">
+                <ul class="navbar-nav d-flex align-items-end text-center justify-content-end">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">home<span class="sr-only"></span> </a>
+                    </li><li class="nav-item">
+                        <a href="playlist.html" class="nav-link">playlist<span class="sr-only"></span> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="team.html" class="nav-link">our team<span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact-us.html" class="nav-link">contact us<span class="sr-only"></span></a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="#" class="nav-link">login<span class="sr-only"></span></a>
+                    </li> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          pages
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="login.html"><i class="fas fa fa-key"><span> |  </span></i> login</a>
+                          <a class="dropdown-item" href="register.html"><i class="fas fa fa-edit"><span> | </span></i> register</a>
+                        </div>
+                      </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+	
+    <section>
+        
+      <div class="bck-wrapper">
+			<div class="site-blocks-cover inner-page-cover overlay"  data-aos="fade" data-stellar-background-ratio="0.5">
+				<div class="container">
+					<div class="row align-items-center justify-content-center text-center">
+						<div class="col-md-10">
+							<h1 class="header-text justify-content-center mb-5" style="margin-bottom: 35% !important;">Contact Us </h1>
+						</div>
+					</div>
+				</div>
+			</div>
+      </div>
+
+    </section>
+
+	<!-- ========== Form ============= -->
+	
+    <div class="site-section bg-light mt-5 mb-5">
+      <div class="container">
+			<div class="row">
+				<div class="col-md-7 mb-5"  data-aos="fade">
+
+					
+
+					<form action="POST" class="p-5 bg-transparent" style="font-size: medium; font-weight: 400;">
+					
+
+						<div class="row form-group">
+							<div class="col-md-6 mb-3 mb-md-0">
+							<label class="text-black" for="fname">First Name</label>
+							<input type="text" id="fname" class="form-control">
+							</div>
+							<div class="col-md-6">
+							<label class="text-black" for="lname">Last Name</label>
+							<input type="text" id="lname" class="form-control">
+							</div>
+						</div>
+
+						<div class="row form-group">
+							
+							<div class="col-md-12">
+							<label class="text-black" for="email">Email</label> 
+							<input type="email" id="email" class="form-control">
+							</div>
+						</div>
+
+						<div class="row form-group">
+							
+							<div class="col-md-12">
+							<label class="text-black" for="subject">Subject</label> 
+							<input type="subject" id="subject" class="form-control">
+							</div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col-md-12">
+							<label class="text-black" for="message">Message</label> 
+							<textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..."></textarea>
+							</div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col-md-12">
+							<input type="submit" value="Send Message" class="btn btn-outline-success py-2 px-4 ">
+							</div>
+						</div>
+		
+					</form>
+				</div>
+
+				<div class="col-md-5"  data-aos="fade" data-aos-delay="100">
+					
+					<div class="p-4 mb-3 bg-white mt-3">
+						<p class="mb-0 font-weight-bold">Address <i class="fa fa fa-home "></i><span class="mb-4"> : Oyetubo str, Ikeja</span></p>
+						<hr>
+						<p class="mb-0 font-weight-bold mt-2">Phone  <i class="fa fa fa-mobile "></i>  : <span class="mb-4"><a href="tel://+2348184463649">  +2348184463649 </a></span></p>
+						<hr>
+						<p class="mb-0 font-weight-bold">Email Address <i class="fa fa fa-paper-plane"></i> : <span class="mb-0"><a href="mailto://kiishijoseph@gmail.com">kiishijoseph@gmail.com</a></span></p>
+
+					</div>
+					
+					<div class="p-4 mb-3 bg-white">
+						<h3 class="h5 text-black mb-3">More Info</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ad iure porro mollitia architecto hic consequuntur. Distinctio nisi perferendis dolore, ipsa consectetur? Fugiat quaerat eos qui, libero neque sed nulla.</p>
+						<p><a href="#" class="btn btn-outline-success px-4 py-2">Learn More</a></p>
+					</div>
+
+				</div>
+			</div>
+        </div>
+    </div>
+
+
+	<!-- =======Footer============= -->
+    <footer class="page-footer font-small blue-grey lighten-5 mt-5 bg-light">
+
+     
+
+      <hr>
+
+      <!-- Footer Links -->
+      <div class="container text-center text-md-left mt-5">
+
+        <!-- Grid row -->
+        <div class="row mt-3 dark-grey-text">
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+
+            <!-- Content -->
+            <h6 class="text-uppercase font-weight-bold"><strong> 8<sup style="text-transform: lowercase !important;">th </sup><span style="text-transform : none !important;">Realm</span><span class="text-success">.</span></strong></h6>
+            <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; font-size: larger; font-weight: 400; color:#8fcac5ee">
+            <p>We bring you sounds from the eight echelon that gives your body and soul the rhythem it needs.</p>
+
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+            <h6 class="text-uppercase font-weight-bold">Nav</h6>
+            <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+            <p>
+              <a class="dark-grey-text" href="contact-us.html" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">Contact Us</a>
+            </p>
+            <!-- <p>
+              <a class="dark-grey-text" href="genre.html" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">genre</a>
+            </p> -->
+            <p>
+              <a class="dark-grey-text" href="team.html" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">Our team</a>
+            </p>
+            <p>
+              <a class="success-text" href="#top" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">top</a>
+            </p>
+
+          </div>
+
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+            <!-- Links -->
+            <h6 class="text-uppercase font-weight-bold">Nav</h6>
+            <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; color: azure; font-size: medium;">
+            <p>
+              <a class="dark-grey-text" href="index.html" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">Home</a>
+            </p>
+            <p>
+              <a class="dark-grey-text" href="playlist.html" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">Playlist</a>
+            </p>
+            <p>
+              <a class="dark-grey-text" href="login.html" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">login</a>
+            </p>
+            <p>
+              <a class="dark-grey-text" href="register.html" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">register</a>
+            </p>
+            
+
+          </div>
+          <!-- Grid column -->
+
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+            <!-- Links -->
+            <h6 class="text-uppercase font-weight-bold">Contact</h6>
+            <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+            <p>
+              <i class="fa fa-home mr-3"> | </i>4, Oyetubo str, Ikeja Lagos</p>
+            <p>
+              <i class="fa fa-envelope mr-3"> | </i>kii-n-shi@outlook.com</p>
+            <p>
+              <i class="fa fa-phone mr-3"> | </i>08184463649</p>
+            <p>
+              <i class="fa fa-print mr-3"> | </i>09032603572</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </footer>
+ 
+
+
+   
+
+
+    <script src="./js/jquery-3.3.1.slim.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+</html>
