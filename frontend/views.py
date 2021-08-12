@@ -5,7 +5,7 @@ from django.core.exceptions import ObjectDoesNotExist
 # Create your views here.
 
 def home(request):
-    return HttpResponse('home page')
+    return HttpResponse('<h1 class = "text-center"> Welcome😃 </h>')
 
 def playlist(request):
     return HttpResponse ('playlist')
