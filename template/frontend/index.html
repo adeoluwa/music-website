@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,10 +7,10 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Home Page</title>
 
-      <link rel="stylesheet" href="./css/style.css">
-      <link rel="stylesheet" href="./css/bootstrap.min.css">
-      <link rel="stylesheet" href="./css/font-awesome.css">
-      <link rel="stylesheet" href="./css/font-awesome.min.css">
+      <link rel="stylesheet" href="{% static 'frontend/css/style.css' %}">
+      <link rel="stylesheet" href="{% static 'frontend/css/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="{% static 'frontend/css/font-awesome.css' %}">
+      <link rel="stylesheet" href="{% static 'frontend/css/font-awesome.min.css' %}">
 
       <!-- <link rel="stylesheet" href="./modal.html"> -->
   </head>
@@ -56,25 +57,22 @@
 
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
+
           <div class="carousel-item active">
-            <img src="./images/find your sound.jpg" class="d-block w-100" alt="...">
+            <img src="{% static 'frontend/images/find your sound.jpg' %}" class="d-block w-100" alt="...">
             <div class=" text-center mt-auto mb-auto carousel-caption"><h5>Welcome😃</h5></div>
           </div>
+
           <div class="carousel-item">
-            <img src="./images/mic stand.jpg" class="d-block w-100" alt="...">
+
+            <img src="{% static 'frontend/images/mic stand.jpg' %}" class="d-block w-100" alt="...">
             <div class="carousel-caption">
               <h5> Check out our selected playlist</h5>
-              <!-- <lord-icon
-                  src="https://cdn.lordicon.com/vieswnpa.json"
-                  trigger="loop"
-                  colors="primary:#08a88a,secondary:#08a88a"
-                  style="width:250px;height:250px">
-              </lord-icon> -->
-            
             </div>
+
           </div>
           <div class="carousel-item">
-            <img src="./images/head phone.jpg" class="d-block w-100" alt="...">
+            <img src="{% static 'frontend/images/head phone.jpg' %}" class="d-block w-100" alt="...">
             <div class="carousel-caption"><h5>Explore the  realm of euphoric music</h5></div>
           </div>
         </div>
@@ -96,7 +94,7 @@
 
         <div class="row mt-5 text-center">
           <div class="track-co col-lg-3 col-md-6 " >
-            <img src="./images/Ruger-Bounce.png" style="min-height: 250px; max-height: 250px;" class="rounded mx-auto d-block">
+            <img src="{% static 'frontend/images/Ruger-Bounce.png' %}" style="min-height: 250px; max-height: 250px;" class="rounded mx-auto d-block">
             <div class="layer">
               <a href=""  data-toggle="modal" data-target="#exampleModalCenter1">
                 <h3 class = 'hottest-track'>Bounce</h3>
@@ -107,7 +105,7 @@
           </div>
 
           <div class="track-co col-lg-3 col-md-6 " >
-            <img src="./images/Rema-Soundgasm.jpg" style="min-height: 250px; max-height: 250px;" class="rounded mx-auto d-block">
+            <img src="{% static 'frontend/images/Rema-Soundgasm.jpg' %}" style="min-height: 250px; max-height: 250px;" class="rounded mx-auto d-block">
             <div class="layer">
                <a href=""  data-toggle="modal" data-target="#exampleModalCenter2">
                 <h3 class = 'hottest-track'>Soundgasm</h3>
@@ -117,7 +115,7 @@
           </div>
 
           <div class="track-co col-lg-3 col-md-6 "  >
-            <img src="./images/Omah-Lay-Understand.jpeg" style="min-height: 250px; max-height: 250px;" class="rounded mx-auto d-block ">
+            <img src="{% static 'frontend/images/Omah-Lay-Understand.jpeg' %}" style="min-height: 250px; max-height: 250px;" class="rounded mx-auto d-block ">
             <div class="layer">
               <a href="" data-toggle="modal" data-target="#exampleModalCenter3" >
                 <h3 class = 'hottest-track'>Understand</h3>
@@ -127,7 +125,7 @@
           </div>
 
           <div class="track-co col-lg-3 col-md-6" >
-              <img src="./images/Olamide-–-Rock.jpg" style="min-height: 250px; max-height: 250px;" class="rounded mx-auto d-block ">
+              <img src="{% static 'frontend/images/Olamide-–-Rock.jpg' %}" style="min-height: 250px; max-height: 250px;" class="rounded mx-auto d-block ">
               <div class="layer">
                 <a href="" data-toggle="modal" data-target="#exampleModalCenter4">
                   <h3 class = 'hottest-track'>Rock</h3>
@@ -148,7 +146,7 @@
       <div class="container">
          <div class="row mt-5 text-center">
           <div class="track-co col-lg-3 col-md-6 " >
-            <img src="./images/Ruger-Bounce.png" style="min-height: 250px; max-height: 250px;" class="rounded mx-auto d-block">
+            <img src="{% static 'frontend/images/Ruger-Bounce.png' %}" style="min-height: 250px; max-height: 250px;" class="rounded mx-auto d-block">
             <div class="layer">
               <a href=""  data-toggle="modal" data-target="#album1">
                 <h3 class = 'hottest-track'>Bounce</h3>
@@ -159,7 +157,7 @@
           </div>
 
           <div class="track-co col-lg-3 col-md-6 " >
-            <img src="./images/Peruzzi-–-Rum-Boogie-IMG.png" style="min-height: 250px; max-height: 250px;" class="rounded mx-auto d-block">
+            <img src="{% static 'frontend/images/Peruzzi-–-Rum-Boogie-IMG.png' %}" style="min-height: 250px; max-height: 250px;" class="rounded mx-auto d-block">
             <div class="layer">
                <a href=""  data-toggle="modal" data-target="#album2">
                 <h3 class = 'hottest-track'>Rum & Boogie</h3>
@@ -169,7 +167,7 @@
           </div>
 
           <div class="track-co col-lg-3 col-md-6 "  >
-            <img src="./images/The-Cavemen-Roots.png" style="min-height: 250px; max-height: 250px;" class="rounded mx-auto d-block ">
+            <img src="{% static 'frontend/images/The-Cavemen-Roots.png' %}" style="min-height: 250px; max-height: 250px;" class="rounded mx-auto d-block ">
             <div class="layer">
               <a href="" data-toggle="modal" data-target="#album3" >
                 <h3 class = 'hottest-track'>Roots</h3>
@@ -179,7 +177,7 @@
           </div>
 
           <div class="track-co col-lg-3 col-md-6" >
-            <img src="./images/Olamide-–-Rock.jpg" style="min-height: 250px; max-height: 250px;" class="rounded mx-auto d-block ">
+            <img src="{% static 'frontend/images/Olamide-–-Rock.jpg' %}" style="min-height: 250px; max-height: 250px;" class="rounded mx-auto d-block ">
             <div class="layer">
               <a href="" data-toggle="modal" data-target="#album4">
                 <h3 class = 'hottest-track'>UY Scuti</h3>
@@ -431,17 +429,25 @@
         </div>
       </div>
     </div>
+<!-- 
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+           <hr>
+        </div>
+      </div>
+    </div> -->
 
-    <hr>
+   
 
     <!-- =======Footer============= -->
-    <footer class="page-footer font-small blue-grey lighten-5 mt-5 bg-light">
+    <footer class="page-footer font-small blue-grey lighten-5 bg-light">
 
       <div class="container text-center text-md-left mt-5">
 
-        <div class="row mt-3 dark-grey-text">
+        <div class="row mt-5 dark-grey-text">
 
-          <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+          <div class="col-md-3 col-lg-4 col-xl-3 mb-4 mt-5">
 
             <h6 class="text-uppercase font-weight-bold"><strong> 8<sup style="text-transform: lowercase !important;">th </sup><span style="text-transform : none !important;">Realm</span><span class="text-success">.</span></strong></h6>
             <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; font-size: larger; font-weight: 400; color:#8fcac5ee">
@@ -449,7 +455,7 @@
 
           </div>
 
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 mt-5">
             <h6 class="text-uppercase font-weight-bold">Nav</h6>
             <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
             <p>
@@ -465,7 +471,7 @@
 
           </div>
 
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 mt-5">
 
             <h6 class="text-uppercase font-weight-bold">Nav</h6>
             <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; color: azure; font-size: medium;">
@@ -484,7 +490,7 @@
             
           </div>
 
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 mt-5">
 
             <h6 class="text-uppercase font-weight-bold">Contact</h6>
             <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
@@ -511,8 +517,8 @@
 
 
     <!-- <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script> -->
-    <script src="./js/jquery-3.3.1.slim.min.js"></script>
-    <script src="./js/popper.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
+    <script src="{% static 'frontend/js/jquery-3.3.1.slim.min.js' %}"></script>
+    <script src="% static 'frontend/js/popper.min.js' %}"></script>
+    <script src="% static 'frontend/js/bootstrap.min.js' %}"></script>
   </body>
 </html>

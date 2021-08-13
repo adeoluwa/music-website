@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,11 +12,11 @@
 
 
     
-    <link rel="stylesheet" href="./css/playlist.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/font-awesome.css">
-    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'frontend/css/playlist.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/font-awesome.min.css' %}">
 </head>
 <body>
 
@@ -60,7 +62,7 @@
         <div class="row mt-5 text-center">
 
             <div class=" col-3 " >
-                <img src="./images/Ruger-Bounce.png" style="min-height: 250px; max-height: 250px;" class="rounded mx-auto d-block">
+                <img src="{% static 'frontend/images/Ruger-Bounce.png' &}" style="min-height: 250px; max-height: 250px;" class="rounded mx-auto d-block">
                 <!-- <lord-icon
                     src="https://cdn.lordicon.com/mmspidej.json"
                     trigger="loop"
@@ -282,8 +284,8 @@
     </footer>
 
     <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
-    <script src="./js/jquery-3.3.1.slim.min.js"></script>
-    <script src="./js/popper.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
+    <script src="{% static 'frontend/js/jquery-3.3.1.slim.min.js' %}"></script>
+    <script src="{% static 'frontend/js/popper.min.js' %}"></script>
+    <script src="{% static 'frontend/js/bootstrap.min.js' %}"></script>
 </body>
 </html>

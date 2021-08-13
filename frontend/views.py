@@ -5,20 +5,25 @@ from django.core.exceptions import ObjectDoesNotExist
 # Create your views here.
 
 def home(request):
-    return HttpResponse('<h1 style = "text-align: center; margin-top: 25%; font-weight : 900"> Welcome😃 </h>')
+    return render(request, 'frontend/index.html')
 
 def playlist(request):
-    return HttpResponse ('<h1 style = "text-align: center; margin-top: 25%; font-weight : 900"> Playlist🎵🎧 </h>')
+    return render (request, 'frontend/playlist.html')
 
 def team(request):
-    return HttpResponse('<h1 style = "text-align: center; margin-top: 25%; font-weight : 900"> Our Team👨‍👩‍👦‍👦 </h>')
+    return render(request, 'frontend/team.html')
 
 def contact(request):
-    return HttpResponse ('<h1 style = "text-align: center; margin-top: 25%; font-weight : 900"> Contact Us💌 </h>')
+    return render(request, 'frontend/contact-us.html')
 
-def login (request):
-    return HttpResponse('<h1 style = "text-align: center; margin-top: 25%; font-weight : 900"> Protect your account 👁‍🗨 </h>')
+def login(request):
+    return render(request, 'frontend/login.html')
 
 def register(request):
-    return HttpResponse ('<h1 style = "text-align: center; margin-top: 25%; font-weight : 900"> Join us 🚀 </h>')
+    return render(request, 'frontend/register.html')
+
+def details(request):
+    return render(request, 'frontend/album-details.html')
+
+
 

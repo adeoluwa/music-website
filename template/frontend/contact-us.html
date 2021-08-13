@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,35 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
 
-    <link rel="stylesheet" href="./css/contact-us.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/font-awesome.css">
-    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'frontend/css/contact-us.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/font-awesome.min.css' %}">
 
-	<style>
-		.bck-wrapper {
-		width: 100%;
-		max-height: 10% !important;
-		background-image:  url(./images/find\ your\ sound.jpg);
-		background-position: center;
-		background-size: cover;
-		background-attachment: unset;
-		position: relative;
-		height: 600px;
-		}
+	  <style>
+      .bck-wrapper {
+      width: 100%;
+      max-height: 10% !important;
+      background-image:  url(./images/find\ your\ sound.jpg);
+      background-position: center;
+      background-size: cover;
+      background-attachment: unset;
+      position: relative;
+      height: 600px;
+      }
 
-		.header-text {
-		margin-top: 25%;
-		margin-right: 15%;
-		color: rgba(255, 255, 255, 0.993);
-		font-weight: 800;
-		font-family: Nunito-Regular;
-		text-transform: capitalize !important;
-		text-align: center;
-		}
+      .header-text {
+      margin-top: 25%;
+      margin-right: 15%;
+      color: rgba(255, 255, 255, 0.993);
+      font-weight: 800;
+      font-family: Nunito-Regular;
+      text-transform: capitalize !important;
+      text-align: center;
+      }
 
-	</style>
+	  </style>
 </head>
 <body>
 
@@ -269,8 +270,8 @@
    
 
 
-    <script src="./js/jquery-3.3.1.slim.min.js"></script>
-    <script src="./js/popper.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
+    <script src="{% static 'frontend/js/jquery-3.3.1.slim.min.js' %}"></script>
+    <script src="{% static 'frontend/js/popper.min.js' %}"></script>
+    <script src="{% static 'frontend/js/bootstrap.min.js' %}"></script>
 </body>
 </html>

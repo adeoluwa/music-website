@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,10 +7,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Register Page</title>
 
-        <link rel="stylesheet" href="./css/bootstrap.min.css">
-        <link rel="stylesheet" href="./css/login.css">
-        <link rel="stylesheet" href="./css/font-awesome.css">
-        <link rel="stylesheet" href="./css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'frontend/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'frontend/css/login.css' %}">
+        <link rel="stylesheet" href="{% static 'frontend/css/font-awesome.css' %}">
+        <link rel="stylesheet" href="{% static 'frontend/css/font-awesome.min.css' %}">
     </head>
     <body>
 
@@ -248,9 +249,9 @@
 
 
 
-        <script src="./js/jquery-3.3.1.slim.min.js"></script>
-        <script src="./js/popper.min.js"></script>
-        <script src="./js/bootstrap.min.js"></script>
+        <script src="{% static 'frontend/js/jquery-3.3.1.slim.min.js' %}"></script>
+        <script src="{% static 'frontend/js/popper.min.js' %}"></script>
+        <script src="{% static 'frontend/js/bootstrap.min.js' %}"></script>
     </body>
 </html>
 
