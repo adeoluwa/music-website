@@ -1,31 +1,52 @@
 /*=======================================================================
 	Contact Section
 =======================================================================*/
-.contact-block{
-	padding-bottom: 100px;
+.bck-wrapper {
+  width: 100%;
+  max-height: 10% !important;
+  background-image: url(/images/find\ your\ sound.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: unset;
+  position: relative;
+  height: 600px;
 }
-.contact-section .section-header{
-	margin-bottom:60px;
+
+.header-text {
+  margin-top: 25%;
+  margin-right: 15%;
+  color: rgba(255, 255, 255, 0.993);
+  font-weight: 800;
+  font-family: Nunito-Regular;
+  text-transform: capitalize !important;
+  text-align: center;
 }
-.form-control{
-	padding:10px;
-	height:auto;
-	border:solid 1px #BBB;
-	-webkit-box-shadow:none;
-	-moz-box-shadow:none;
-	box-shadow:none;
-	border-radius:0;
-	vertical-align:middle;
+
+.contact-block {
+  padding-bottom: 100px;
 }
-.form-control:focus{
-	border-color:#B7A389;
-	-webkit-box-shadow:none;
-	-moz-box-shadow:none;
-	box-shadow:none;	
+.contact-section .section-header {
+  margin-bottom: 60px;
 }
-.contact-form .form-group{
-	margin-bottom:25px;
+.form-control {
+  padding: 10px;
+  height: auto;
+  border: solid 1px #bbb;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+  vertical-align: middle;
 }
-.contact-form .alert{
-	border-radius:0;
+.form-control:focus {
+  border-color: #b7a389;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.contact-form .form-group {
+  margin-bottom: 25px;
+}
+.contact-form .alert {
+  border-radius: 0;
 }
