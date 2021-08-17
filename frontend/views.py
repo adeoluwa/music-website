@@ -25,5 +25,8 @@ def register(request):
 def details(request):
     return render(request, 'frontend/album-details.html')
 
+def tracks(request):
+    return render(request, 'frontend/tracks.html')
+
 
 

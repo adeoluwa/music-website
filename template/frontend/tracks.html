@@ -1,0 +1,317 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tracks</title>
+
+    <link rel="stylesheet" href="{% static 'frontend/css/playlist.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/bootstrap.min.css' %}">
+</head>
+<body>
+
+  <!-- ====== Navigation  bar ==========-->
+
+  <section id="nav-bar">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed ">
+          <a href="#" class="navbar-brand"><strong>8<sup>th</sup> Realm <span class="text-success">.</span></strong></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="toggle-navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse align-items-center text-center justify-content-center" id="navbarNav">
+              <ul class="navbar-nav d-flex align-items-end text-center justify-content-end">
+                  <li class="nav-item">
+                      <a href="index.html" class="nav-link">home<span class="sr-only"></span> </a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="playlist.html" class="nav-link">playlist<span class="sr-only"></span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="team.html" class="nav-link">our team<span class="sr-only"></span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="contact-us.html" class="nav-link">contact us<span class="sr-only"></span></a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a href="tracks.html" class="nav-link"> Tracks <span class="sr-only"></span> </a>
+                  </li>
+                  
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          pages
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="login.html"><i class="fas fa fa-key"><span> |  </span></i> login</a>
+                          <a class="dropdown-item" href="register.html"><i class="fas fa fa-edit"><span> | </span></i> register</a>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+  </section>
+
+
+  <!-- ========== Tracks  =============-->
+
+  
+  <section class="album">
+        
+    <lord-icon
+        src="https://cdn.lordicon.com/vieswnpa.json"
+        trigger="loop"
+        colors="primary:#121331,secondary:#08a88a"
+        style="width:100px;height:100px">
+    </lord-icon>
+      
+    <div class="container-fluid mt-5">
+      
+      <div class="row" >
+        <div class="album-col col-md-3 col-sm-12" >
+          <img src="{% static 'frontend/images/bounce.png' %}" >
+          <div class="layer">
+            <a href="#" data-toggle="modal" data-target="#rudger">
+              <h3 class = 'hitz'>Ruger-Bounce</h3>
+            </a>
+          </div>
+        </div>
+        
+        <div class="album-col col-md-3" >
+          <img src="{% static 'frontend/images/dollypizzle.jpeg' %}" style="min-height: 280px; max-height: 280px;" >
+          <div class="layer">
+            <a href="#" data-toggle="modal" data-target="#dollypizzle">
+              <h3 class = 'hitz'>What you know</h3>
+            </a>
+          </div>
+        </div>
+        
+        <div class="album-col col-md-3" >
+          <img src="{% static 'frontend/images/Omah-Lay-Understand.jpeg' %}" >
+          <div class="layer">
+            <a href="#" data-toggle="modal" data-target="#understand">
+              <h3 class = 'hitz'>Understand</h3>
+            </a>
+          </div>
+        </div>
+        
+        <div class="album-col col-md-3" >
+          <img src="{% static 'frontend/images/feeling-ladipoe.jfif' %}" >
+          <div class="layer">
+            <a href="#" data-toggle="modal" data-target="#ladipoe">
+              <h3 class = 'hitz'>feeling-ladipoe</h3>
+            </a>
+          </div>
+        </div>
+        
+        <div class="album-col col-md-3" >
+          <img src="{% static 'frontend/images/kilometer-burnaboy.jpg' %}" >
+          <div class="layer">
+            <h3 class = 'hitz'>Kilometer</h3>
+          </div>
+        </div>
+        
+        <div class="album-col col-md-3" >
+          <img src="{% static 'frontend/images/joe boy.jpg' %}" >
+          <div class="layer">
+            <h3 class = 'hitz'>Show me</h3>
+          </div>
+        </div>
+        
+        <div class="album-col col-md-3" >
+          <img src="{% static 'frontend/images/peru-fireboy.jfif' %}" >
+          <div class="layer">
+            <i class="badge badge-info mr-2">New</i>
+            <h3 class = 'hitz'>Peru</h3>
+          </div>
+        </div>
+
+        <div class="album-col col-md-3" >
+          <img src="{% static 'frontend/images/Shall-We-Begin-artwork.jpeg' %}" >
+          <div class="layer">
+            <h3 class = 'hitz'>Verified</h3>
+          </div>
+        </div>
+        
+        <div class="album-col col-md-3" >
+          <img src="{% static 'frontend/images/zlatan.jpeg' %}" >
+          <div class="layer">
+            <h3 class = 'hitz'>cho cho</h3>
+          </div>
+        </div>
+        
+        <div class="album-col col-md-3" >
+          <img src="{% static 'frontend/images/Buju-Outside.jpg' %}" >
+          <div class="layer">
+            <h3 class = 'hitz'>Outside</h3>
+          </div>
+        </div>
+        
+        <div class="album-col col-md-3" >
+          <img src="{% static 'frontend/images/Yaba-Buluku.jpeg' %}" >
+          <div class="layer">
+              <i class="badge badge-info mr-2">New</i>
+            <h3 class = 'hitz'>Yaba buluku (remix)</h3>
+          </div>
+        </div>
+        
+        <div class="album-col col-md-3" >
+          <img src="{% static 'frontend/images/Olamide-–-Rock.jpg' %}" >
+          <div class="layer">
+            <h3 class = 'hitz'>Rock</h3>
+          </div>
+        </div>
+        
+        <div class="album-col col-md-3" >
+          <img src="{% static 'frontend/images/papisnoop.jpeg' %}" >
+          <div class="layer">
+            <h3 class = 'hitz'>Morire</h3>
+          </div>
+        </div>
+        
+        <div class="album-col col-md-3" >
+          <img src="{% static 'frontend/images/essence-remix.jpg' %}" >
+          <div class="layer">
+            <i class="badge badge-info mr-2">New</i>
+            <h3 class = 'hitz'>Essence remix</h3>
+          </div>
+        </div>
+        
+        <div class="album-col col-md-3" >
+          <img src="{% static 'frontend/images/High-Tension-2.jpeg' %}" >
+          <div class="layer">
+            <h3 class = 'hitz'>Party next door</h3>
+          </div>
+        </div>
+        
+        <div class="album-col col-md-3" >
+          <img src="{% static 'frontend/images/Adekunle-Gold-Sinner.jpg' %}" >
+          <div class="layer">
+              <i class="badge badge-info mr-2">New</i>
+            <h3 class = 'hitz'>Sinner</h3>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+   </section>
+            
+
+            <!-- ========== Modals ========= -->
+            
+            
+            <div class="modal fade" id="rudger" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Ruger: Bounce</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  
+                  <div class="modal-body">
+                    <audio controls>
+                      <source src="horse.ogg" type="audio/ogg">
+                      <source src="horse.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            
+            
+            
+            <div class="modal fade" id="dollypizzle" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">dollypizzle:  What you know</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+
+                  <div class="modal-body">
+                    <audio controls>
+                      <source src="horse.ogg" type="audio/ogg">
+                      <source src="horse.mp3" type="audio/mpeg">
+                    </audio>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            
+            
+            
+            
+            <div class="modal fade" id="understand" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Omah-Lay: Understand</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+          </div>
+          
+          <div class="modal-body">
+            <audio controls>
+              <source src="horse.ogg" type="audio/ogg">
+              <source src="horse.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="modal fade" id="ladipoe" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">ladipoe ft Buju: Feelings</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          
+          <div class="modal-body">
+            <audio controls>
+              <source src="horse.ogg" type="audio/ogg">
+              <source src="horse.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+    <script src="./js/jquery-3.3.1.slim.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    
+</body>
+</html>
