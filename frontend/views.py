@@ -28,5 +28,7 @@ def details(request):
 def tracks(request):
     return render(request, 'frontend/tracks.html')
 
+def albums(request):
+    return render(request, 'frontend/album.html')
 
 
