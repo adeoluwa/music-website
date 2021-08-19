@@ -26,7 +26,7 @@
   transition: 0.5s;
 }
 .layer:hover {
-  background: rgba(96, 184, 103, 0.6);
+  /* background: rgba(96, 184, 103, 0.6); */
   padding-top: 25%;
   color: #fff3f3;
   transition: 0.5s;
