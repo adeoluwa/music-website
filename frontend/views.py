@@ -23,7 +23,7 @@ def register(request):
     return render(request, 'frontend/register.html')
 
 def details(request):
-    return render(request, 'frontend/album-details.html')
+    return render(request, 'frontend/details.html')
 
 def tracks(request):
     return render(request, 'frontend/tracks.html')
