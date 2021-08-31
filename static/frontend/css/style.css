@@ -83,11 +83,11 @@
 }
 
 /* --------Track------------- */
-
+/* 
 .img-fluid .max-width {
   max-width: 100%;
   height: auto;
-}
+} */
 
 .track {
   width: auto;
@@ -103,10 +103,10 @@
   position: relative;
   overflow: hidden;
 }
-.track-co img {
+/* .track-co img {
   width: 100%;
   display: block;
-}
+} */
 
 .layer {
   background: transparent;

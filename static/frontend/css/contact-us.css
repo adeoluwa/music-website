@@ -4,7 +4,7 @@
 .bck-wrapper {
   width: 100%;
   max-height: 10% !important;
-  background-image: url(/images/find\ your\ sound.jpg);
+  background-image: url(/images/find\ your\ sound.jpg) ;
   background-position: center;
   background-size: cover;
   background-attachment: unset;
