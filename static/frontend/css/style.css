@@ -22,7 +22,6 @@
   padding: 0;
 }
 
-
 /* -----navigation------- */
 #nav-bar {
   position: sticky;
@@ -164,7 +163,7 @@
   transition: 0.5s;
 }
 
-.track  h1::after {
+.track h1::after {
   content: '';
   background: grey;
   display: block;
@@ -182,3 +181,6 @@
   margin: 20px auto 5px;
 }
 
+audio {
+  width: 150px;
+}

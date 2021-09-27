@@ -14,21 +14,21 @@ Album page
     <div class="container-fluid mt-5">
 
         <div class="row" >
-            <div class="album-col col-md-3 col-lg-3 col-sm-6" >
+            <div class="album-col col-md-6 col-lg-3 col-sm-12" >
                 <img src="{% static 'frontend/images/ruger.jpg' %}"  >
                 <div class="layer">
-                    <a href="details.html"><h3 class = 'hitz'>Pandemic EP</h3></a>
+                    <a href="{% url 'frontend:details' %}"><h3 class = 'hitz'>Pandemic EP</h3></a>
                 </div>
             </div>
 
-            <div class="album-col col-md-3" >
+            <div class="album-col col-md-6 col-lg-3 col-sm-12" >
                 <img src="{% static 'frontend/images/The-Cavemen-Roots.png' %}" >
                 <div class="layer">
                     <h3 class = 'hitz'>Roots</h3>
                 </div>
             </div>
 
-            <div class="album-col col-md-3" >
+            <div class="album-col col-md-6 col-lg-3 col-sm-12" >
                 <img src="{% static 'frontend/images/Peruzzi-–-Rum-Boogie-IMG.png' %}">
                 <div class="layer">
                     <h3 class = 'hitz'>Rum & Boogie</h3>
@@ -36,13 +36,24 @@ Album page
             </div>
 
             <div class="album-col col-md-3" >
+                <img src="{% static 'frontend/images/Afro pop volume 1.jpg' %}" >
+                <div class="layer">
+                    <h3 class = 'hitz'>Afro Pop Volume 1</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="album-col col-md-6 col-lg-3 col-sm-12" >
                 <img src="{% static 'frontend/images/Burna_Boy_-_African_Giant.png' %}" >
                 <div class="layer">
                     <h3 class = 'hitz'>African Giant</h3>
                 </div>
             </div>
 
-            <div class="album-col col-md-3" >
+            <div class="album-col col-md-6 col-lg-3 col-sm-12" >
                 <img src="{% static 'frontend/images/twice as tall_burna boy.jpg' %}" >
                 <div class="layer">
                     <h3 class = 'hitz'>Twice as Tall</h3>
@@ -62,6 +73,9 @@ Album page
                     <h3 class = 'hitz'>wonderland</h3>
                 </div>
             </div>
+        </div>
+
+        <div class="row">
 
             <div class="album-col col-md-3" >
                 <img src="{% static 'frontend/images/Shall-We-Begin-artwork.jpeg' %}" >
@@ -90,8 +104,10 @@ Album page
                     <h3 class = 'hitz'>L.T.G</h3>
                 </div>
             </div>
-
-            <div class="album-col col-md-3" >
+        </div>
+           
+        <div class="row">
+             <div class="album-col col-md-3" >
                 <img src="{% static 'frontend/images/carpe diem olamide.jpg' %}" >
                 <div class="layer">
                     <h3 class = 'hitz'>Capre Diem</h3>
@@ -118,13 +134,10 @@ Album page
                     <h3 class = 'hitz'>High Tension 2.0</h3>
                 </div>
             </div>
+        </div>
 
-            <div class="album-col col-md-3" >
-                <img src="{% static 'frontend/images/Afro pop volume 1.jpg' %}" >
-                <div class="layer">
-                    <h3 class = 'hitz'>Afro Pop Volume 1</h3>
-                </div>
-            </div>
+        
+
 
         </div>
     </div>

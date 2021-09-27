@@ -22,6 +22,7 @@
       <link rel="stylesheet" href="{% static 'frontend/css/bootstrap.min.css' %}">
       <link rel="stylesheet" href="{% static 'frontend/css/font-awesome.css' %}">
       <link rel="stylesheet" href="{% static 'frontend/css/font-awesome.min.css' %}">
+      <link rel="stylesheet" href="{% static 'frontend/css/custom.css' %}">
 
 
     </head>
@@ -37,29 +38,37 @@
 
                 <div class="collapse navbar-collapse align-items-center text-center justify-content-center" id="navbarNav">
                     <ul class="navbar-nav d-flex align-items-end text-center justify-content-end">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">home<span class="sr-only"></span> </a>
+
+                        {% url 'home' as Home %}
+                        {% url 'frontend:albums' as Albums%}
+                        {% url 'frontend:team' as About %}
+                        {% url 'frontend:tracks' as Tracks %}
+                        {% url 'frontend:contact' as Contact %}
+                        {% url 'frontend:login' as Login%}
+
+                        <li {% if request.path == Home %}  class="nav-item active" {% endif %}>
+                            <a href="{% url 'home' %}" class="nav-link">home<span class="sr-only"></span> </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="playlist.html" class="nav-link">albums<span class="sr-only"></span></a>
+                        <li {% if request.path == Albums %} class="nav-item active" {% endif %}>
+                            <a href="{% url 'frontend:albums' %}" class="nav-link">albums<span class="sr-only"></span></a>
                         </li>
-                        <li class="nav-item">
-                            <a href="team.html" class="nav-link">our team<span class="sr-only"></span></a>
+                        <li {% if request.path == About %} class="nav-item active" {% endif %}>
+                            <a href="{% url 'frontend:team'%}" class="nav-link">About Us<span class="sr-only"></span></a>
                         </li>
-                        <li class="nav-item">
-                            <a href="tracks.html" class="nav-link">Tracks<span class="sr-only"></span></a>
+                        <li {% if request.path == Tracks %} class="nav-item active" {% endif %}>
+                            <a href="{% url 'frontend:tracks' %}" class="nav-link">Tracks<span class="sr-only"></span></a>
                         </li>
-                        <li class="nav-item">
-                            <a href="contact-us.html" class="nav-link">contact us<span class="sr-only"></span></a>
+                        <li {% if request.path == Contact %} class="nav-item active" {% endif %}>
+                            <a href="{% url 'frontend:contact' %}" class="nav-link">contact us<span class="sr-only"></span></a>
                         </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <li {% if request.path == Login %} class="nav-item dropdown active" {% endif %}>
+                            <a class="nav-link dropdown-toggle" href="{% url 'frontend:login' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 pages
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="login.html"><i class="fas fa fa-key"><span> |  </span></i> login</a>
-                                <a class="dropdown-item" href="register.html"><i class="fas fa fa-edit"><span> | </span></i> register</a>
+                                <a class="dropdown-item" href="{% url 'frontend:login' %}"><i class="fas fa fa-key"><span> |  </span></i> login</a>
+                                <!-- <a class="dropdown-item" href="{% url 'frontend:register' %}"><i class="fas fa fa-edit"><span> | </span></i> register</a> -->
                             </div>
                         </li>
                     </ul>
@@ -92,15 +101,15 @@
                         <h6 class="text-uppercase font-weight-bold">Nav</h6>
                         <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                         <p>
-                            <a class="dark-grey-text" href="contact-us.html" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">Contact Us</a>
+                            <a class="dark-grey-text" href="{% url 'frontend:contact'%}" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">Contact Us</a>
                         </p>
                 
                         <p>
-                            <a class="dark-grey-text" href="team.html" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">Our team</a>
+                            <a class="dark-grey-text" href="{% url 'frontend:team' %}" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">About Us</a>
                         </p>
 
                         <p>
-                            <a class="dark-grey-text" href="tracks.html" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">Tracks</a>
+                            <a class="dark-grey-text" href="{% url 'frontend:tracks' %}" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">Tracks</a>
                         </p>
 
                         <p>
@@ -111,20 +120,20 @@
 
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 mt-5">
 
-                        <h6 class="text-uppercase font-weight-bold">Nav</h6>
+                        <h6 class="text-uppercase font-weight-bold">Menu</h6>
                         <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; color: azure; font-size: medium;">
                         <p>
-                            <a class="dark-grey-text" href="index.html" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">Home</a>
+                            <a class="dark-grey-text" href="{% url 'home' %}" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">Home</a>
                         </p>
                         <p>
-                            <a class="dark-grey-text" href="album.html" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">Album</a>
+                            <a class="dark-grey-text" href="{% url 'frontend:albums' %}" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">Album</a>
                         </p>
                         <p>
-                            <a class="dark-grey-text" href="login.html" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">login</a>
+                            <a class="dark-grey-text" href="{% url 'frontend:login' %}" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">login</a>
                         </p>
-                        <p>
+                        <!-- <p>
                             <a class="dark-grey-text" href="register.html" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">register</a>
-                        </p>
+                        </p> -->
                         
                     </div>
 

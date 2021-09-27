@@ -1,0 +1,22 @@
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.bck-wrapper {
+  /* min-height: 100vh; */
+  width: 100%;
+  max-height: 10% !important;
+  background-image: url(../images/find\ your\ sound.jpg);
+  /* max-height: 85% !important; */
+  background-position: center;
+  background-size: cover;
+  background-attachment: unset;
+  position: relative;
+  margin-top: 10px;
+}
