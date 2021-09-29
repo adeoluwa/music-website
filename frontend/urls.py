@@ -15,8 +15,9 @@ urlpatterns = [
     path('tracks/', views.tracks, name='tracks'),
     path('albums/', views.albums, name='albums'),
     path('dashboard/', views.dashboard, name='dashboard'),
-    path('addsong/', views.add_song, name='addsong'),
-    path('changepassword/', views.change_password, name='changepassword'),
-    path('editprofile/', views.edit_profile, name='edit')
+    path('add-album/', views.add_album, name='add-album'),
+    path('add-track/', views.add_track, name='add-track'),
+    path('change-password/', views.change_password, name='change-password'),
+    path('edit-profile/', views.edit_profile, name='edit')
 ]
 

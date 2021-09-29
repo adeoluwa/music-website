@@ -34,8 +34,11 @@ def albums(request):
 def dashboard(request):
     return render(request, 'frontend/Dashboard.html')
 
-def add_song(request):
+def add_album(request):
     return render(request, 'frontend/AddSong.html')
+
+def add_track(request):
+    return render(request, 'frontend/Addsingle.html')
 
 def change_password(request):
     return render(request, 'frontend/changepwd.html')

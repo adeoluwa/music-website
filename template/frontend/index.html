@@ -13,7 +13,7 @@ Home page
 
     <div class="carousel-item active">
       <img src="{% static 'frontend/images/find your sound.jpg' %}" class="d-block w-100 slider" alt="..." style="max-width: 100% !important;">
-      <div class=" text-center mt-auto mb-auto carousel-caption"><h5>Welcome😃</h5></div>
+      <div class=" text-center mt-auto mb-auto carousel-caption "><h5>Welcome😃</h5></div>
     </div>
 
     <div class="carousel-item">
@@ -104,7 +104,7 @@ Home page
       <div class="track-co col-lg-3 col-md-6 col-sm-12 " >
         <img src="{% static 'frontend/images/Ruger-Bounce.png' %}" style="min-height: 250px; max-height: 250px;" class="img-fluid mx-auto d-block">
         <div class="layer">
-          <a href=""  data-toggle="modal" data-target="#album1">
+          <a href="{% url 'frontend:albums' %}"  data-toggle="modal" data-target="#album1">
             <h3 class = 'hottest-track'>Bounce</h3>
             <h4 class = "hottest-track">Rudger</h4>
           </a>
@@ -117,7 +117,7 @@ Home page
       <div class="track-co col-lg-3 col-md-6 col-sm-12 " >
         <img src="{% static 'frontend/images/Peruzzi-–-Rum-Boogie-IMG.png' %}" style="min-height: 250px; max-height: 250px;" class="img-fluid mx-auto d-block">
         <div class="layer">
-            <a href=""  data-toggle="modal" data-target="#album2">
+            <a href="{% url 'frontend:albums' %}"  data-toggle="modal" data-target="#album2">
               <h3 class = 'hottest-track'>Rum & Boogie</h3>
               <h4 class = "hottest-track">Peruzzi</h4>
             </a>
@@ -127,7 +127,7 @@ Home page
       <div class="track-co col-lg-3 col-md-6  col-sm-12"  >
           <img src="{% static 'frontend/images/The-Cavemen-Roots.png' %}" style="min-height: 250px; max-height: 250px;" class="img-fluid mx-auto d-block ">
           <div class="layer">
-              <a href="" data-toggle="modal" data-target="#album3" >
+              <a href="{% url 'frontend:albums' %}" data-toggle="modal" data-target="#album3" >
                 <h3 class = 'hottest-track'>Roots</h3>
                 <h4 class="hottest-track">The Cavemen</h4>
               </a>
@@ -137,7 +137,7 @@ Home page
       <div class="track-co col-lg-3 col-md-6 col-sm-12" >
         <img src="{% static 'frontend/images/Olamide-–-Rock.jpg' %}" style="min-height: 250px; max-height: 250px;" class="img-fluid mx-auto d-block ">
         <div class="layer">
-          <a href="" data-toggle="modal" data-target="#album4">
+          <a href="{% url 'frontend:albums' %}" data-toggle="modal" data-target="#album4">
             <h3 class = 'hottest-track'>UY Scuti</h3>
             <h4 class="hottest-track">Olamide</h4>
           </a>

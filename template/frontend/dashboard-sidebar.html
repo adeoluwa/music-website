@@ -4,24 +4,24 @@
  <div class="col-md-3 col-lg-3 py-5 mb-2 border bg-secondary">
     <ul class="nav flex-column">
         <li class="nav-item border-bottom">
-            <a class="nav-link text-white active" href="Dashboard.html"><strong>Dashboard</strong></a>
+            <a class="nav-link text-white active" href="{% url 'frontend:dashboard'%}"><strong>Dashboard</strong></a>
         </li>
 
         <li class="nav-item border-bottom">
-            <a class="nav-link text-white" href="AddSong.html"> <i class="fa fa-music">  </i> Add Songs</a>
+            <a class="nav-link text-white" href="{% url 'frontend:add-album' %}"> <i class="fa fa-music">  </i> Add Album</a>
         </li>
 
         <li class="nav-item border-bottom">
-            <a class="nav-link text-white" href="#"> <i class="fa fa-leanpub">  </i> View Songs</a>
+            <a class="nav-link text-white" href="{% url 'frontend:add-track' %}"> <i class="fa fa-leanpub">  </i> Add Singles</a>
         </li>
         
         <li class="nav-item border-bottom">
-            <a class="nav-link text-white" href="#"><i class="fa fa-street-view">  </i> View Profile </a>
+            <a class="nav-link text-white" href="#"><i class="fa fa-street-view">  </i> Logout </a>
         </li>
         
-        <li class="nav-item border-bottom">
+        <!-- <li class="nav-item border-bottom">
             <a class="nav-link text-white" href="edit.html"><i class="fa fa-user-secret">  </i> Edit Profile </a>
-        </li> 
+        </li>  -->
         
         <li class="nav-item border-bottom">
             <a class="nav-link text-white" href="changepwd.html"><i class="fa fa-wrench">  </i> Change Password</a>
