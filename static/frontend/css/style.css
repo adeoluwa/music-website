@@ -70,6 +70,7 @@
   transform: translateY(-50%);
   bottom: initial !important;
 }
+
 .carousel-caption h5 {
   color: #ffffff;
   font-size: 42px;
@@ -102,10 +103,6 @@
   position: relative;
   overflow: hidden;
 }
-/* .track-co img {
-  width: 100%;
-  display: block;
-} */
 
 .layer {
   background: transparent;
@@ -181,6 +178,3 @@
   margin: 20px auto 5px;
 }
 
-audio {
-  width: 150px;
-}

@@ -7,7 +7,7 @@ admin.site.site_header = '8th Realm Music'
 admin.site.register(Album)
 admin.site.register(Team)
 admin.site.register(Track)
-# admin.site.register(Genre)
+admin.site.register(Genre)
 
 # @admin.register(Album)
 # class AlbumAdmin(admin.ModelAdmin):

@@ -7,29 +7,22 @@ Album page
 {% block content %}
 
 
-
-
-    
-
-
-
-
     <style>
         .container{
             margin-top: 10% !important;
         }
 
+        
+
     </style>
 
- 
-
     <!-- ======== Album details ============== -->
-
+<!-- 
     <div class="container mt-5">
         <div class="row">
             <div class="col-lg-12 offset-1">
                 <div class="row">
-                    <div class="col-lg-4 col-md-4">
+                    <div class="col-lg-4 col-md-4 ">
                         <div class="latest-album-thumb" style="height: 430px;"></div>
                     </div>
 
@@ -61,55 +54,95 @@ Album page
                                     " 10"
                                 </span>
                                 <br>
-                                <hr>
-                                <span class="release-date">
-                                    <strong>Title Track: </strong>
-                                    " Track Name"
-                                </span>
+                                
                                 <br>
                             </div>
 
-                            <!-- <a href="#" class="button">
-                                <i class="fa fa-soundcloud"></i>
-                                 Listen on SoundCloud
-                            </a> -->
-
-                             <!-- <span>
-                                    <lord-icon
-                                        src="https://cdn.lordicon.com/mmspidej.json"
-                                        trigger="loop"
-                                        colors="primary:#121331,secondary:#08a88a"
-                                        style="width:50px;height:50px;">
-                                    </lord-icon> 
-                                </span> -->
                         </div>
 
-                        
                     </div>
 
-                    <div class="col-md-4">
-                        <!-- <h5>Bounce</h5>
+                    <div class="col-md-4 mt-3">
+                        <h5 class="mb-3">Bounce</h5>
                         <audio controls src="../../static/frontend/audio/05-Ruger-Bounce-(JustNaija.com).mp3" type="audio/mpeg">
-                            bounce
-                        </audio> -->
+                           
+                        </audio>
 
-                        <!-- <audio src="../audio/05-Ruger-Bounce-(JustNaija.com).mp3"></audio> -->
+                     
+                    </div>
+                    
                     </div>
                     
                 </div>
                 
-                
-
-                
 
             </div>
 
+        </div>
+    </div> -->
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 ">
+                <div class="latest-album-thumb" style="height: 430px;"></div>
+            </div>
+
+            <div class="col-4">
+                <audio controls src="../../static/frontend/audio/05-Ruger-Bounce-(JustNaija.com).mp3" type="audio/mpeg"></audio>
+                <hr>
+                <audio controls src="../../static/frontend/audio/05-Ruger-Bounce-(JustNaija.com).mp3" type="audio/mpeg" ></audio>
+                <hr>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <div class="latest-album-info">
+                    <h4>Album Name: pandemic EP</h4>
+                    <div class="latest-album-meta">
+                        <br>
+                        <hr>
+                        <span class="release-date">
+                            <strong>Artist Name:</strong>
+                            " Name"
+                        </span>
+                        <br>
+                        <hr>
+                        <span class="release-date">
+                            <strong>Genre: </strong>
+                            " Afro Pop"
+                        </span>
+                        <br>
+                        <hr>
+                        <span class="release-date">
+                            <strong> Total Songs: </strong>
+                            " 10"
+                        </span>
+                        <br>
+                        
+                        <br>
+                    </div>
+        
+                </div>
+        
+            </div>
         </div>
     </div>
 
 
 
 
-    <!-- <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script> -->
+
+
+
+
+
+
+
+
+
+
+
+
 
 {% endblock%}

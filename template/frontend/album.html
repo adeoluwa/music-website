@@ -6,36 +6,39 @@ Album page
 
 {% block content %}
 
-<link rel="stylesheet" href="{% static 'frontend/css/playlist.css'%}">
+<link rel="stylesheet" href="{% static 'frontend/css/playlist.css' %}">
+<link rel="stylesheet" href="{% static 'frontend/css/style.css' %}">
+<link rel="stylesheet" href="{% static 'frontend/css/bootstrap.min.css' %}">
 
 <section class="album">
-    <h1>Selected Albums</h1>
+    <h1 class="display-4">Selected Albums</h1>
     
-    <div class="container-fluid mt-5">
+  
+<div class="container-fluid mt-5">
 
         <div class="row" >
-            <div class="album-col col-md-6 col-lg-3 col-sm-d-block" >
+            <div class="album-col  col-lg-3 col-md-6 col-sm-12 col-12" >
                 <img src="{% static 'frontend/images/ruger.jpg' %}"  >
                 <div class="layer">
                     <a href="{% url 'frontend:details' %}"><h3 class = 'hitz'>Pandemic EP</h3></a>
                 </div>
             </div>
 
-            <div class="album-col col-md-6 col-lg-3 col-sm-12" >
+            <div class="album-col  col-lg-3 col-md-6 col-sm-12 col-12" >
                 <img src="{% static 'frontend/images/The-Cavemen-Roots.png' %}" >
                 <div class="layer">
                     <h3 class = 'hitz'>Roots</h3>
                 </div>
             </div>
 
-            <div class="album-col col-md-6 col-lg-3 col-sm-12" >
+            <div class="album-col col-lg-3 col-md-6 col-sm-12 col-12" >
                 <img src="{% static 'frontend/images/Peruzzi-–-Rum-Boogie-IMG.png' %}">
                 <div class="layer">
                     <h3 class = 'hitz'>Rum & Boogie</h3>
                 </div>
             </div>
 
-            <div class="album-col col-md-3" >
+            <div class="album-col  col-lg-3 col-md-6 col-sm-12 col-12" >
                 <img src="{% static 'frontend/images/Afro pop volume 1.jpg' %}" >
                 <div class="layer">
                     <h3 class = 'hitz'>Afro Pop Volume 1</h3>
@@ -44,30 +47,34 @@ Album page
 
         </div>
 
-        <div class="row">
+    </div>
 
-            <div class="album-col col-md-6 col-lg-3 col-sm-12" >
+    <div class="container-fluid">
+
+        <div class="row">
+    
+            <div class="album-col  col-lg-3 col-md-6 col-sm-12 col-12" >
                 <img src="{% static 'frontend/images/Burna_Boy_-_African_Giant.png' %}" >
                 <div class="layer">
                     <h3 class = 'hitz'>African Giant</h3>
                 </div>
             </div>
-
-            <div class="album-col col-md-6 col-lg-3 col-sm-12" >
+    
+            <div class="album-col  col-lg-3 col-md-6 col-sm-12 col-12" >
                 <img src="{% static 'frontend/images/twice as tall_burna boy.jpg' %}" >
                 <div class="layer">
                     <h3 class = 'hitz'>Twice as Tall</h3>
                 </div>
             </div>
-
-            <div class="album-col col-md-3" >
+    
+            <div class="album-col  col-lg-3 col-md-6 col-sm-12 col-12" >
                 <img src="{% static 'frontend/images/davido-a-better-time-stream.jfif' %}" >
                 <div class="layer">
                     <h3 class = 'hitz'>A better Time</h3>
                 </div>
             </div>
-
-            <div class="album-col col-md-3" >
+    
+            <div class="album-col  col-lg-3 col-md-6 col-sm-12 col-12" >
                 <img src="{% static 'frontend/images/teni wonderland.jpg' %}" >
                 <div class="layer">
                     <h3 class = 'hitz'>wonderland</h3>
@@ -75,60 +82,69 @@ Album page
             </div>
         </div>
 
-        <div class="row">
+    </div>
 
-            <div class="album-col col-md-3" >
+    <div class="container-fluid">
+
+        <div class="row">
+    
+            <div class="album-col  col-lg-3 col-md-6 col-sm-12 col-12" >
                 <img src="{% static 'frontend/images/Shall-We-Begin-artwork.jpeg' %}" >
                 <div class="layer">
                     <h3 class = 'hitz'>Shall we begin</h3>
                 </div>
             </div>
-
-            <div class="album-col col-md-3" >
+    
+            <div class="album-col  col-lg-3 col-md-6 col-sm-12 col-12" >
                 <img src="{% static 'frontend/images/joe boy.jpg' %}" >
                 <div class="layer">
                     <h3 class = 'hitz'>S.B.B.M</h3>
                 </div>
             </div>
-
-            <div class="album-col col-md-3" >
+    
+            <div class="album-col  col-lg-3 col-md-6 col-sm-12 col-12" >
                 <img src="{% static 'frontend/images/apollo_fireboy dml.jpg' %}" >
                 <div class="layer">
                     <h3 class = 'hitz'>Apollo</h3>
                 </div>
             </div>
-
-            <div class="album-col col-md-3" >
+    
+            <div class="album-col  col-lg-3 col-md-6 col-sm-12 col-12" >
                 <img src="{% static 'frontend/images/LTG fireboy.png' %}" >
                 <div class="layer">
                     <h3 class = 'hitz'>L.T.G</h3>
                 </div>
             </div>
         </div>
-           
+
+    </div>
+
+    <div class="container-fluid">
+
         <div class="row">
-             <div class="album-col col-md-3" >
+
+            <div class="album-col  col-lg-3 col-md-6 col-sm-12 col-12" >
                 <img src="{% static 'frontend/images/carpe diem olamide.jpg' %}" >
                 <div class="layer">
                     <h3 class = 'hitz'>Capre Diem</h3>
                 </div>
             </div>
-
-            <div class="album-col col-md-3" >
+    
+            <div class="album-col  col-lg-3 col-md-6 col-sm-12 col-12" >
                 <img src="{% static 'frontend/images/what have we done.jpg' %}" >
                 <div class="layer">
                     <h3 class = 'hitz'>What Have We Done -EP</h3>
                 </div>
             </div>
-
-            <div class="album-col col-md-3" >
+    
+            <div class="album-col  col-lg-3 col-md-6 col-sm-12 col-12" >
                 <img src="{% static 'frontend/images/wizzy.jpg' %}" >
                 <div class="layer">
                     <h3 class = 'hitz'>Made in Lagos</h3>
                 </div>
             </div>
-
-            <div class="album-col col-md-3" >
+    
+            <div class="album-col  col-lg-3 col-md-6 col-sm-12 col-12" >
                 <img src="{% static 'frontend/images/High-Tension-2.jpeg' %}" >
                 <div class="layer">
                     <h3 class = 'hitz'>High Tension 2.0</h3>
@@ -136,11 +152,11 @@ Album page
             </div>
         </div>
 
-        
-
-
-        </div>
     </div>
+   
+
+
+        
 </section>
 
 {% endblock %}
