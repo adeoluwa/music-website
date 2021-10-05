@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.exceptions import ObjectDoesNotExist
+from frontend.models import *
 
 # Create your views here.
 
@@ -11,7 +12,8 @@ def playlist(request):
     return render (request, 'frontend/playlist.html')
 
 def team(request):
-    return render(request, 'frontend/team.html')
+    team = Team.objects.order_by('-created')
+    return render(request, 'frontend/team.html', {'members':team})
 
 def contact(request):
     return render(request, 'frontend/contact-us.html')
@@ -25,11 +27,14 @@ def register(request):
 def details(request):
     return render(request, 'frontend/details.html')
 
+
 def tracks(request):
-    return render(request, 'frontend/tracks.html')
+    track = Track.objects.order_by('-time_added')
+    return render(request, 'frontend/tracks.html', {'track':track})
 
 def albums(request):
-    return render(request, 'frontend/album.html')
+    album  = Album.objects.order_by('-time_added')
+    return render(request, 'frontend/album.html', {'album':album})
 
 def dashboard(request):
     return render(request, 'frontend/Dashboard.html')

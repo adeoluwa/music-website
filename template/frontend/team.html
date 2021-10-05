@@ -35,266 +35,59 @@ Our Team
 
 <div class="our-team">
   <div class="container">
+    <div class="col-12">
+      <h2 class="text-center">Dev Ops</h2>
+    </div>
     <div class="row">
-      <div class="col-12">
-        <h2 class="text-center">Dev Ops</h2>
-      </div>
 
-      <div class="col-sm-6 col-lg-4">
-        <div class="box-bg">
-          <div class="client-img">
-            <img
-              src="{% static 'frontend/images/Deolu.jpg' %}"
-              class="img-fluid img-rounded"
-              style="border-radius: 50%"
-            />
-          </div>
-
-          <div class="details">
-            <h4 class="text-center">Deolu Joseph</h4>
-            <h6 class="text-center">Lead Developer</h6>
-            <p class="text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Architecto consequuntur quas fuga accusantium sequi harum.
-            </p>
-            <a href="#">Read More</a>
-          </div>
-
-          <div class="social-links">
-            <h4 class="text-center">Follow Me</h4>
-            <ul>
-              <li>
-                <a href="#"><i class="fa fa-facebook-f"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-pinterest-p"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-lg-4">
-        <div class="box-bg">
-          <div class="client-img">
-            <img
-              src="{% static 'frontend/images/member 1.jpg' %}"
-              class="img-fluid"
-              style="border-radius: 50%"
-            />
+      {% if members %}
+        {% for m in members %}
+          <div class="col-sm-6 col-lg-4">
+            <div class="box-bg">
+              <div class="client-img">
+                <img
+                  src="{{m.get_team_img}}"
+                  class="img-fluid img-rounded"
+                  style="border-radius: 50%"
+                />
+              </div>
+    
+              <div class="details">
+                <h4 class="text-center">{{ m.get_team_member_name}}</h4>
+                <h6 class="text-center">{{ m.get_team_role}}</h6>
+                <p class="text-center">
+                  {{m.get_profile}}
+                </p>
+                <!-- <a href="#">Read More</a> -->
+              </div>
+    
+              <div class="social-links">
+                <h4 class="text-center">Follow Me</h4>
+                <ul>
+                  <li>
+                    <a href="#"><i class="fa fa-facebook-f"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
 
-          <div class="details">
-            <h4 class="text-center">Your Name</h4>
-            <h6 class="text-center">Web Developer</h6>
-            <p class="text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              tempor incididunt ut labore et dolore
-            </p>
-            <a href="#">Read More</a>
-          </div>
+        {% endfor %}
+      {% endif %}
 
-          <div class="social-links">
-            <h4 class="text-center">Follow Me</h4>
-            <ul>
-              <li>
-                <a href="#"><i class="fa fa-facebook-f"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-pinterest-p"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-lg-4">
-        <div class="box-bg">
-          <div class="client-img">
-            <img
-              src="{% static 'frontend/images/member 2.jpg' %}"
-              class="img-fluid img-rounded"
-              style="border-radius: 50%"
-            />
-          </div>
-
-          <div class="details">
-            <h4 class="text-center">Your Name</h4>
-            <h6 class="text-center">Graphic Designer</h6>
-            <p class="text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              tempor incididunt ut labore et dolore
-            </p>
-            <a href="#">Read More</a>
-          </div>
-
-          <div class="social-links">
-            <h4 class="text-center">Follow Me</h4>
-            <ul>
-              <li>
-                <a href="#"><i class="fa fa-facebook-f"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-pinterest-p"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-lg-4">
-        <div class="box-bg">
-          <div class="client-img">
-            <img
-              src="{% static 'frontend/images/member 3.jpg' %}"
-              class="img-fluid"
-              style="border-radius: 50%"
-            />
-          </div>
-          <div class="details">
-            <h4 class="text-center">Your Name</h4>
-            <h6 class="text-center">PHP Developer</h6>
-            <p class="text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              tempor incididunt ut labore et dolore
-            </p>
-            <a href="#">Read More</a>
-          </div>
-
-          <div class="social-links">
-            <h4 class="text-center">Follow Me</h4>
-            <ul>
-              <li>
-                <a href="#"><i class="fa fa-facebook-f"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-pinterest-p"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-lg-4">
-        <div class="box-bg">
-          <div class="client-img">
-            <img
-              src="{% static 'frontend/images/member 4.jpg' %}"
-              class="img-fluid"
-              style="border-radius: 50%"
-            />
-          </div>
-
-          <div class="details">
-            <h4 class="text-center">Your Name</h4>
-            <h6 class="text-center">Web Designer</h6>
-            <p class="text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              tempor incididunt ut labore et dolore
-            </p>
-            <a href="#">Read More</a>
-          </div>
-
-          <div class="social-links">
-            <h4 class="text-center">Follow Me</h4>
-            <ul>
-              <li>
-                <a href="#"><i class="fa fa-facebook-f"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-pinterest-p"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-lg-4">
-        <div class="box-bg">
-          <div class="client-img">
-            <img
-              src="{% static 'frontend/images/member 5.jpg' %}"
-              class="img-fluid"
-              style="border-radius: 50%"
-            />
-          </div>
-          <div class="details">
-            <h4 class="text-center">Your Name</h4>
-            <h6 class="text-center">Graphic Designer</h6>
-            <p class="text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              tempor incididunt ut labore et dolore
-            </p>
-            <a href="#">Read More</a>
-          </div>
-
-          <div class="social-links">
-            <h4 class="text-center">Follow Me</h4>
-            <ul>
-              <li>
-                <a href="#"><i class="fa fa-facebook-f"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-pinterest-p"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      
     </div>
   </div>
 </div>
