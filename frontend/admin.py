@@ -17,3 +17,4 @@ class Albumadmin(admin.ModelAdmin):
 class Trackadmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('track_name',)}
     
+admin.site.register(ContactUs)

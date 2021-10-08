@@ -21,52 +21,59 @@ Album page
 
     <div class="container">
         <div class="row">
-            <div class="col-md-4 ">
-                <div class="latest-album-thumb" style="height: 430px;"></div>
-            </div>
+            
+            {% if album %}
 
-            <div class="col-lg-4 col-md-4">
-                <div class="latest-album-info">
-                    <h5>Album Name: pandemic EP</h5>
-                    <div class="latest-album-meta">
-                        <hr>
-                        <span class="release-date">
-                            <strong>Artist Name:</strong>
-                            " Name"
-                        </span>
-                        <br>
-                        <hr>
-                        <span class="release-date">
-                            <strong>Genre: </strong>
-                            " Afro Pop"
-                        </span>
-                        <br>
-                        <hr>
-                        <span class="release-date">
-                            <strong> Total Songs: </strong>
-                            " 10"
-                        </span>
-                        <br>
-                        
-                        <br>
-                    </div>
-        
+
+                <div class="col-md-4 ">
+                    <div class="latest-album-thumb" style="height: 430px;">{{a.get_album_image}}</div>
                 </div>
-        
-            </div>
 
-            <div class="col-4">
-                <audio controls src="../../static/frontend/audio/05-Ruger-Bounce-(JustNaija.com).mp3" type="audio/mpeg"></audio>
-                <hr>
-                <audio controls src="../../static/frontend/audio/05-Ruger-Bounce-(JustNaija.com).mp3" type="audio/mpeg" ></audio>
-                <hr>
-                <audio controls src="../../static/frontend/audio/05-Ruger-Bounce-(JustNaija.com).mp3" type="audio/mpeg" ></audio>
-                <hr>
-                <audio controls src="../../static/frontend/audio/05-Ruger-Bounce-(JustNaija.com).mp3" type="audio/mpeg" ></audio>
-                <hr>
-                <audio controls src="../../static/frontend/audio/05-Ruger-Bounce-(JustNaija.com).mp3" type="audio/mpeg" ></audio>
-                <hr>
-            </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="latest-album-info">
+                        <h5>Album Name: {{a.get_album_name}}</h5>
+                        <div class="latest-album-meta">
+                            <hr>
+                            <span class="release-date">
+                                <strong>Artist Name:</strong>
+                                {{a.get_album_artist}}
+                            </span>
+                            <br>
+                            <hr>
+                            <span class="release-date">
+                                <strong>Genre: </strong>
+                                {{a.get_album_genres}}
+                            </span>
+                            <br>
+                            <hr>
+                            <span class="release-date">
+                                <strong> Total Songs: </strong>
+                                {{a.number_of_tracks}}
+                            </span>
+                            <br>
+                            
+                            <br>
+                        </div>
+            
+                    </div>
+            
+                </div>
+
+                <div class="col-4">
+                    <audio controls src="{{a.get_album_audio_1}}" type="audio/mpeg"></audio>
+                    <hr>
+                    <audio controls src="{{a.get_album_audio_2}}" type="audio/mpeg" ></audio>
+                    <hr>
+                    <audio controls src="{{a.get_album_audio_3}}" type="audio/mpeg" ></audio>
+                    <hr>
+                    <audio controls src="{{a.get_album_audio_4}}" type="audio/mpeg" ></audio>
+                    <hr>
+                    <audio controls src="{{a.get_album_audio}}" type="audio/mpeg" ></audio>
+                    <hr>
+                </div>
+
+            {% endif %}
+
 
 
         </div>

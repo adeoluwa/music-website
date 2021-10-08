@@ -17,9 +17,6 @@ class User(models.Model):
         return self.user_name
     
 
-
-
-    
 class Team(models.Model):
     team_member_names = models.CharField(max_length=200)
     team_role = models.CharField(max_length=200)
@@ -82,6 +79,18 @@ class Album(models.Model):
     def __str__(self) :
         return self.album_name
     
+    def get_album_artist(self):
+        if self.album_artist:
+            return self.album_artist
+        
+    def get_album_genre(self):
+        if self.album_genres:
+            return self.album_genres
+        
+    def get_number_of_tracks(self):
+        if self.number_of_tracks:
+            return self.number_of_tracks
+    
     def get_album_name(self):
         if self.album_name:
             return self.album_name
@@ -139,11 +148,7 @@ class Album(models.Model):
         if self.album_audio_12:
             return self.album_audio_12
         
-    # def album_url(self):
-    #     if self.album_name.url:
-    #         return self.album_name.url
-    #     else:
-    #         return '/static/frontend/images/album_image'
+   
         
         
     def get_album_url(self):
@@ -213,19 +218,29 @@ class Track(models.Model):
     
     
     
-
+    
+class ContactUs(models.Model):
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    email = models.EmailField()
+    phone = models.CharField(max_length=200)
+    message = models.TextField()
+    created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)
+    
+    
+    class Meta():
+        verbose_name_plural = 'Contact Us'
+    
+    # def __str__(self):
+    #     return self.n
+    
+    
     
 
-# class Artist(models.Model):
-#     album_artist = models.ForeignKey(Album, related_name='artist_of_album', on_delete=models.CASCADE)
-#     track_artist = models.ForeignKey(Track, related_name='artist_of_track', on_delete=models.CASCADE)
     
-#     def get_album_artist(self):
-#         return self.album_artist
-    
-#     def get_track_artist(self):
-#         return self.track_artist
-    
+
+
     
     
     

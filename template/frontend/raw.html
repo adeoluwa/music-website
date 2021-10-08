@@ -1307,3 +1307,100 @@
         </div>
     </div>
 </div>
+
+
+<!-- contact us -->
+
+ <!-- {% if messages %} {% for mes in messages %}
+<div class="alert alert-success">{{mes}}</div>
+{% endfor %} {% endif %} -->
+
+
+
+<!-- Track of the week -->
+
+<div class="track-co col-lg-3 col-md-6 col-sm-12 col-12" >
+    <img src="{% static 'frontend/images/Rema-Soundgasm.jpg' %}" style="min-height: 250px; max-height: 250px;" class="img-fluid mx-auto d-block">
+    <div class="layer">
+        <a href=""  data-toggle="modal" data-target="#exampleModalCenter2">
+        <h3 class = 'hottest-track'>Soundgasm</h3>
+        <h4 class = "hottest-track">Rema</h4>
+        </a>
+    </div>
+</div>
+
+<div class="track-co col-lg-3 col-md-6 col-sm-12 col-12"  >
+    <img src="{% static 'frontend/images/Omah-Lay-Understand.jpeg' %}" style="min-height: 250px; max-height: 250px;" class="img-fluid mx-auto d-block ">
+    <div class="layer">
+        <a href="" data-toggle="modal" data-target="#exampleModalCenter3" >
+        <h3 class = 'hottest-track'>Understand</h3>
+        <h4 class="hottest-track">Omah Lay</h4>
+        </a>
+    </div>
+</div>
+
+<div class="track-co col-lg-3 col-md-6 col-sm-12 col-12" >
+    <img src="{% static 'frontend/images/Olamide-–-Rock.jpg' %}" style="min-height: 250px; max-height: 250px;" class="img-fluid mx-auto d-block ">
+    <div class="layer">
+        <a href="" data-toggle="modal" data-target="#exampleModalCenter4">
+        <h3 class = 'hottest-track'>Rock</h3>
+        <h4 class="hottest-track">Olamide</h4>
+        </a>
+    </div>
+</div>
+
+<!-- ====== album of the week  -->
+
+<div class="track-co col-lg-3 col-md-6 col-sm-12 col-12" >
+    <img src="{% static 'frontend/images/Peruzzi-–-Rum-Boogie-IMG.png' %}" style="min-height: 250px; max-height: 250px;" class="img-fluid mx-auto d-block">
+    <div class="layer">
+        <a href="{% url 'frontend:albums' %}"  data-toggle="modal" data-target="#album2">
+            <h3 class = 'hottest-track'>Rum & Boogie</h3>
+            <h4 class = "hottest-track">Peruzzi</h4>
+        </a>
+    </div>
+</div>
+
+<div class="track-co col-lg-3 col-md-6 col-sm-12 col-12"  >
+    <img src="{% static 'frontend/images/The-Cavemen-Roots.png' %}" style="min-height: 250px; max-height: 250px;" class="img-fluid mx-auto d-block ">
+    <div class="layer">
+        <a href="{% url 'frontend:albums' %}" data-toggle="modal" data-target="#album3" >
+        <h3 class = 'hottest-track'>Roots</h3>
+        <h4 class="hottest-track">The Cavemen</h4>
+        </a>
+    </div>
+</div>
+
+<div class="track-co col-lg-3 col-md-6 col-sm-12 col-12" >
+    <img src="{% static 'frontend/images/Olamide-–-Rock.jpg' %}" style="min-height: 250px; max-height: 250px;" class="img-fluid mx-auto d-block ">
+    <div class="layer">
+        <a href="{% url 'frontend:albums' %}" data-toggle="modal" data-target="#album4">
+        <h3 class = 'hottest-track'>UY Scuti</h3>
+        <h4 class="hottest-track">Olamide</h4>
+        </a>
+    </div>
+</div>
+
+
+
+<!-- album models -->
+# def album_url(self):
+#     if self.album_name.url:
+#         return self.album_name.url
+#     else:
+#         return '/static/frontend/images/album_image'
+
+
+
+
+<!-- artist model -->
+# class Artist(models.Model):
+#     album_artist = models.ForeignKey(Album, related_name='artist_of_album', on_delete=models.CASCADE)
+#     track_artist = models.ForeignKey(Track, related_name='artist_of_track', on_delete=models.CASCADE)
+    
+#     def get_album_artist(self):
+#         return self.album_artist
+    
+#     def get_track_artist(self):
+#         return self.track_artist
+    
