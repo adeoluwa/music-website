@@ -26,29 +26,31 @@ Album page
 
 
                 <div class="col-md-4 ">
-                    <div class="latest-album-thumb" style="height: 430px;">{{a.get_album_image}}</div>
+                    <div class="latest-album-thumb" style="height: 430px">
+                    <img src="{{album.get_album_image}}" alt="album image" class="img-fluid rounded-lg">
+                    </div>
                 </div>
 
-                <div class="col-lg-4 col-md-4">
+                <div class="col-lg-4 col-md-4  mt-2 sec">
                     <div class="latest-album-info">
-                        <h5>Album Name: {{a.get_album_name}}</h5>
+                        <h5>Album Name: {{album.get_album_name}}</h5>
                         <div class="latest-album-meta">
                             <hr>
                             <span class="release-date">
                                 <strong>Artist Name:</strong>
-                                {{a.get_album_artist}}
+                                {{album.get_album_artist}}
                             </span>
                             <br>
                             <hr>
                             <span class="release-date">
                                 <strong>Genre: </strong>
-                                {{a.get_album_genres}}
+                                {{album.get_album_genre}}
                             </span>
                             <br>
                             <hr>
                             <span class="release-date">
                                 <strong> Total Songs: </strong>
-                                {{a.number_of_tracks}}
+                                {{album.number_of_tracks}}
                             </span>
                             <br>
                             
@@ -60,16 +62,17 @@ Album page
                 </div>
 
                 <div class="col-4">
-                    <audio controls src="{{a.get_album_audio_1}}" type="audio/mpeg"></audio>
+                    <audio controls src="{{album.get_album_audio_1}}" type="audio/mpeg"></audio>
                     <hr>
-                    <audio controls src="{{a.get_album_audio_2}}" type="audio/mpeg" ></audio>
+                    <audio controls src="{{album.get_album_audio_2}}" type="audio/mpeg" ></audio>
                     <hr>
-                    <audio controls src="{{a.get_album_audio_3}}" type="audio/mpeg" ></audio>
+                    <audio controls src="{{album.get_album_audio_3}}" type="audio/mpeg" ></audio>
                     <hr>
-                    <audio controls src="{{a.get_album_audio_4}}" type="audio/mpeg" ></audio>
+                    <audio controls src="{{album.get_album_audio_4}}" type="audio/mpeg" ></audio>
                     <hr>
-                    <audio controls src="{{a.get_album_audio}}" type="audio/mpeg" ></audio>
+                    <audio controls src="{{album.get_album_audio_5}}" type="audio/mpeg" ></audio>
                     <hr>
+                    <audio controls src="{{album.get_album_audio_6}}" type="audio/mpeg" ></audio>
                 </div>
 
             {% endif %}

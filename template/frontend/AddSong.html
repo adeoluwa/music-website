@@ -31,62 +31,24 @@ Add Songs
         {% include 'frontend/dashboard-sidebar.html' %}
         
         <div class="col-md-6 col-lg-6  bg-light">
-            <form action="#" class="p-5 bg-white border">
-        
-                <div class="row form-group">
-                    <div class="col-md-12 mb-3 mb-md-0">
-                        <label class="font-weight-bold" for="fullname">Artist Name</label>
-                        <input type="text" id="artistname" class="form-control" placeholder="Artist Name">
-                    </div>
-                </div>
-                <div class="row form-group">
-                    <div class="col-md-12 mb-3 mb-md-0">
-                        <label class="font-weight-bold" for="fullname">Album Name</label>
-                        <input type="text" id="fullname" class="form-control" placeholder="Full Name">
-                    </div>
-                </div>
 
-                <div class="row form-group">
-                    <div class="col-md-12 mb-3 mb-md-0">
-                        <label class="font-weight-bold" for="fullname">Genre</label>
-                        <input type="text" id="genre" class="form-control" placeholder="Genre">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12 mb-3 mb-md-0">
-                        <label class="font-weight-bold" for="fullname">Number of Tracks</label>
-                        <input type="number" id="numberoftracks" class="form-control" placeholder="Number of Tracks">
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12 mb-3 mb-md-0">
-                        <label class="font-weight-bold" for="fullname">Choose File</label>
-                        <input type="file" id="uploadAlbum" class="form-control" placeholder="uploadAlbum">
-                        <br>
-                        <input type="file" id="uploadAlbum" class="form-control" placeholder="uploadAlbum">
-                        <br>
-                        <input type="file" id="uploadAlbum" class="form-control" placeholder="uploadAlbum">
-                        <br>
-                        <input type="file" id="uploadAlbum" class="form-control" placeholder="uploadAlbum">
-                        <br>
-                        <input type="file" id="uploadAlbum" class="form-control" placeholder="uploadAlbum">
-                        <br>
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <div class="col-md-12 mb-3 mb-md-0">
-                        <label class="font-weight-bold" for="fullname" >Album Description</label>
-                        <textarea class="form-control" maxlength="80"></textarea>
-                    </div>
-                </div>
+            
 
 
-                <input type="submit" class="btn btn-outline-secondary" value="Upload Album">
+            <form action="#" class="p-5 bg-white border" method="POST">
+
+                {% if messages %}
+                    {% for mes in messages %}
+                        <div class="alert alert-success">{{ mes }}</div>
+                    {% endfor %}
+                {% endif %}
+
+
+                {{ album_user.as_p }}
+                 {% csrf_token %}
+                <button type="submit" class="btn btn-outline-secondary" >Upload Album </button>
                 
-        
+               
             </form>
         
         </div>

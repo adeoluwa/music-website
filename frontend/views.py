@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import get_object_or_404, redirect, render
 from django.core.exceptions import ObjectDoesNotExist
 from frontend.models import *
 from django.contrib import messages
@@ -8,7 +8,12 @@ from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from django.conf import settings
 from django.contrib.auth import login, logout, authenticate
-# from django.contrib.auth import logout, authenticate
+from django.contrib.auth.decorators import login_required
+from django.utils.text import slugify
+
+from frontend.forms import *
+# from django import forms
+#
 
 # from django.http import HttpResponse
 # Create your views here.
@@ -22,8 +27,7 @@ def home(request):
     }
     return render(request, 'frontend/index.html', context)
 
-# def playlist(request):
-#     return render (request, 'frontend/playlist.html')
+
 
 def team(request):
     team = Team.objects.order_by('-created')
@@ -74,18 +78,24 @@ def login_view(request):
             return redirect('frontend:dashboard')
         else:
             messages.error(request, 'Username and password incorrect')
-        return render(request, 'frontend/login.html')
+    return render(request, 'frontend/login.html')
+    
 
 
-def logout(request):
-    return logout(request)
+@login_required(login_url='/pages/login_view')
+def logout_view(request):
+    logout(request)
+    return redirect('frontend:login_view')
+
 
 def register(request):
     return render(request, 'frontend/register.html')
 
-def details(request):
-    # alb = Album.objects.get(id=album_id)
-    return render(request, 'frontend/details.html')
+
+def details(request, slug):
+    album_details = get_object_or_404(Album, slug=slug)
+    return render(request, 'frontend/details.html', {'album':album_details})
+
 
 
 def tracks(request):
@@ -96,17 +106,44 @@ def albums(request):
     album  = Album.objects.order_by('-time_added')
     return render(request, 'frontend/album.html', {'album':album})
 
+
+
+@login_required(login_url='/dashboard/')
 def dashboard(request):
     return render(request, 'frontend/Dashboard.html')
 
+
+
+
+@login_required(login_url='/pages/login_view')
 def add_album(request):
-    return render(request, 'frontend/AddSong.html')
+    if request.method == 'POST':
+        album_form = AddAlbum(request.POST, request.FILES)
+        if album_form.is_valid():
+            album_form.save(commit=False)
+            album_form.user = request.user
+            album_form.instance.slug = album_form.cleaned_data.get('slug')
+            album_form.save()
+            messages.success(request, 'Album Added Successfully')
+    else:
+        album_form = AddAlbum()
+            
+    return render(request, 'frontend/AddSong.html' ,{'album_user':album_form})
 
+
+
+@login_required(login_url='/pages/login_view')
 def add_track(request):
-    return render(request, 'frontend/Addsingle.html')
+    # if request.method == 'POST':
+    #         track_form = AddTrack(request.POST)
+    #         if track_form.is_valid(): 
+    #             track_form.save()
+    #             messages.success(request, 'Track Added Successfully')
+    #     else:
+    #         track_form = AddTrack  
+    return render(request, 'frontend/Addsingle.html') #{'track':track_form})
 
+@login_required(login_url='/pages/login_view')
 def change_password(request):
     return render(request, 'frontend/changepwd.html')
 
-def edit_profile(request):
-    return render(request, 'frontend/edit.html')

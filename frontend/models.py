@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.shortcuts import reverse
+from django.urls import reverse
 from datetime import datetime
 
 
@@ -68,7 +68,7 @@ class Album(models.Model):
     album_audio_10= models.FileField(blank=True, null=True, upload_to='upload')
     album_audio_11= models.FileField(blank=True, null=True, upload_to='upload')
     album_audio_12= models.FileField(blank=True, null=True, upload_to='upload')
-    slug = models.SlugField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True, null=True)
     # user_id = models.ForeignKey(User, related_name='user_id',on_delete=models.CASCADE )
     approve = models.BooleanField(default=False)
     # created = models.DateTimeField(auto_now_add=True)
@@ -99,62 +99,64 @@ class Album(models.Model):
         if self.album_image:
             return self.album_image.url
         
+    def get_absolute_url(self):
+        return reverse('frontend:details', kwargs={
+            'slug':self.slug,
+        })
+        
         
     def get_album_audio_1(self):
         if self.album_audio_1:
-            return self.album_audio_1
+            return self.album_audio_1.url
         
     def get_album_audio_2(self):
         if self.album_audio_2:
-            return self.album_audio_2
+            return self.album_audio_2.url
         
     def get_album_audio_3(self):
         if self.album_audio_3:
-            return self.album_audio_3
+            return self.album_audio_3.url
         
     def get_album_audio_4(self):
         if self.album_audio_4:
-            return self.album_audio_4
+            return self.album_audio_4.url
         
     def get_album_audio_5(self):
         if self.album_audio_5:
-            return self.album_audio_5
+            return self.album_audio_5.url
         
     def get_album_audio_6(self):
         if self.album_audio_6:
-            return self.album_audio_6
+            return self.album_audio_6.url
         
     def get_album_audio_7(self):
         if self.album_audio_7:
-            return self.album_audio_7
+            return self.album_audio_7.url
         
     def get_album_audio_8(self):
         if self.album_audio_8:
-            return self.album_audio_8
+            return self.album_audio_8.url
         
     def get_album_audio_9(self):
         if self.album_audio_9:
-            return self.album_audio_9
+            return self.album_audio_9.url
         
     def get_album_audio_10(self):
         if self.album_audio_10:
-            return self.album_audio_10
+            return self.album_audio_10.url
         
     def get_album_audio_11(self):
         if self.album_audio_11:
-            return self.album_audio_11
+            return self.album_audio_11.url
         
     def get_album_audio_12(self):
         if self.album_audio_12:
-            return self.album_audio_12
+            return self.album_audio_12.url
         
    
         
         
-    def get_album_url(self):
-        return reverse('public_view:album_name', kwargs={
-            'slug': self.slug
-        })
+    
     class Meta():
         verbose_name_plural = 'Album'
         
@@ -197,7 +199,7 @@ class Track(models.Model):
             return self.track_audio.url
     
     def get_track_url(self):
-        return reverse('public_view:track_name', kwargs={
+        return reverse('frontend:track_name', kwargs={
             'slug': self.slug
         })
         

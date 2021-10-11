@@ -37,6 +37,40 @@
                 </button>
 
                 <div class="collapse navbar-collapse align-items-center text-center justify-content-center" id="navbarNav">
+
+                    {% if request.user.is_authenticated%}
+                    <ul class="navbar-nav d-flex align-items-end text-center justify-content-end">
+                        
+                        {% url 'home' as Home %}
+                        {% url 'frontend:albums' as Albums%}
+                        {% url 'frontend:team' as About %}
+                        {% url 'frontend:tracks' as Tracks %}
+                        {% url 'frontend:contact' as Contact %}
+                        {% url 'frontend:login_view' as Login %}
+                        {% url 'frontend:logout_view' as Logout %}
+                        {% url 'frontend:dashboard' as Dashboard %} 
+    
+                        <li {% if request.path == Home %}  class="nav-item active" {% endif %}>
+                            <a href="{% url 'home' %}" class="nav-link">home<span class="sr-only"></span> </a>
+                        </li>
+                        <li {% if request.path == Albums %} class="nav-item active" {% endif %}>
+                            <a href="{% url 'frontend:albums' %}" class="nav-link">albums<span class="sr-only"></span></a>
+                        </li>
+                        <li {% if request.path == Tracks %} class="nav-item active" {% endif %}>
+                            <a href="{% url 'frontend:tracks' %}" class="nav-link">Tracks<span class="sr-only"></span></a>
+                        </li>
+                        <li {% if request.path == Dashboard %} class="nav-item active" {% endif %}>
+                            <a href="{% url 'frontend:dashboard'%}" class="nav-link">Dashboard<span class="sr-only"></span></a>
+                        </li>
+                        <li {% if request.path == Logout %} class="nav-item active" {% endif %}>
+                            <a href="{% url 'frontend:logout_view' %}" class="nav-link">Logout<span class="sr-only"></span></a>
+                        </li>
+                            
+                            
+                    </ul> 
+
+                    {% else %}
+                        
                     <ul class="navbar-nav d-flex align-items-end text-center justify-content-end">
 
                         {% url 'home' as Home %}
@@ -63,15 +97,16 @@
                         </li>
 
                         <li {% if request.path == Login %} class="nav-item dropdown active" {% endif %}>
-                            <a class="nav-link dropdown-toggle" href="{% url 'frontend:login' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="{% url 'frontend:login_view' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 pages
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{% url 'frontend:login' %}"><i class="fas fa fa-key"><span> |  </span></i> login</a>
+                                <a class="dropdown-item" href="{% url 'frontend:login_view' %}"><i class="fas fa fa-key"><span> |  </span></i> login</a>
                                 <!-- <a class="dropdown-item" href="{% url 'frontend:register' %}"><i class="fas fa fa-edit"><span> | </span></i> register</a> -->
                             </div>
                         </li>
                     </ul>
+                    {% endif %}
                 </div>
             </nav>
         </section>
@@ -137,7 +172,7 @@
                             <a class="dark-grey-text" href="{% url 'frontend:albums' %}" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">Album</a>
                         </p>
                         <p>
-                            <a class="dark-grey-text" href="{% url 'frontend:login' %}" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">login</a>
+                            <a class="dark-grey-text" href="{% url 'frontend:login_view' %}" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">login</a>
                         </p>
                         <!-- <p>
                             <a class="dark-grey-text" href="register.html" style="text-decoration: solid; color: #8fcac5ee; font-size: medium;">register</a>

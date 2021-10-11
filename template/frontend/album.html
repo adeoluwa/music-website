@@ -1,43 +1,27 @@
-{% extends 'frontend/base.html' %}
-{% load static %}
-{% block title %}
-Album page
-{% endblock %}
+{% extends 'frontend/base.html' %} {% load static %} {% block title %} Album
+page {% endblock %} {% block content %}
 
-{% block content %}
-
-<link rel="stylesheet" href="{% static 'frontend/css/playlist.css' %}">
-<link rel="stylesheet" href="{% static 'frontend/css/style.css' %}">
-<link rel="stylesheet" href="{% static 'frontend/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'frontend/css/playlist.css' %}" />
+<link rel="stylesheet" href="{% static 'frontend/css/style.css' %}" />
+<link rel="stylesheet" href="{% static 'frontend/css/bootstrap.min.css' %}" />
 
 <section class="album">
-    <h1 class="display-4">Selected Albums</h1>
-    
-  
-    <div class="container-fluid mt-5">
+  <h1 class="display-4">Selected Albums</h1>
 
-        <div class="row" >
-
-            {% if album %}
-                {% for a in album%}
-                <div class="album-col  col-lg-3 col-md-6 col-sm-12 col-12" >
-                    <img src="{{a.get_album_image}}"  >
-                    <div class="layer">
-                        <a href="{% url 'frontend:details' %}"><h3 class = 'hitz'>{{a.get_album_name}}</h3></a>
-                    </div>
-                </div>
-                {% endfor%}
-            {% endif %}
-
+  <div class="container-fluid mt-5">
+    <div class="row">
+      {% if album %} {% for a in album%}
+      <div class="album-col col-lg-3 col-md-6 col-sm-s12 col-12">
+        <img src="{{a.get_album_image}}" />
+        <div class="layer">
+          <a href="{{a.get_absolute_url }}"
+            ><h3 class="hitz">{{a.get_album_name}}</h3></a
+          >
         </div>
-
+      </div>
+      {% endfor%} {% endif %}
     </div>
-
-   
-   
-
-
-        
+  </div>
 </section>
 
 {% endblock %}
