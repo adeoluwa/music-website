@@ -120,10 +120,10 @@ def add_album(request):
     if request.method == 'POST':
         album_form = AddAlbum(request.POST, request.FILES)
         if album_form.is_valid():
-            album_form.save(commit=False)
-            album_form.user = request.user
-            album_form.instance.slug = album_form.cleaned_data.get('slug')
-            album_form.save()
+            var = album_form.save(commit=False)
+            var.user = request.user
+            var.slug = slugify(album_form.cleaned_data.get('album_name'))
+            var.save()
             messages.success(request, 'Album Added Successfully')
     else:
         album_form = AddAlbum()

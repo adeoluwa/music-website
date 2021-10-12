@@ -68,7 +68,7 @@ class Album(models.Model):
     album_audio_10= models.FileField(blank=True, null=True, upload_to='upload')
     album_audio_11= models.FileField(blank=True, null=True, upload_to='upload')
     album_audio_12= models.FileField(blank=True, null=True, upload_to='upload')
-    slug = models.SlugField(max_length=200, unique=True, null=True)
+    slug = models.SlugField(max_length=200, unique=True)
     # user_id = models.ForeignKey(User, related_name='user_id',on_delete=models.CASCADE )
     approve = models.BooleanField(default=False)
     # created = models.DateTimeField(auto_now_add=True)
