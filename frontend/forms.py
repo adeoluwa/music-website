@@ -10,7 +10,7 @@ class AddAlbum(forms.ModelForm):
     class Meta():
         model = Album
         fields = '__all__' 
-        exclude = ['slug', 'approve']
+        exclude = ['slug', 'approve', 'album_audio_7','album_audio_8','album_audio_9','album_audio_10','album_audio_11','album_audio_12']
         
     def clean_name(self):
         album_name = self.clean_name.get('album_name').capitalize()
